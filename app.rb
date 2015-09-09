@@ -34,7 +34,7 @@ class Candy < Sinatra::Base
   end
 
   #show
-  get '/chocolates:id' do
+  get '/chocolates/:id' do
     @chocolate = Chocolate.find(params[:id])
     erb(:"chocolates/show")
   end
@@ -46,7 +46,7 @@ class Candy < Sinatra::Base
   end
 
   #update
-  put '/chocolates/:id' do
+  update '/chocolates/:id' do
     @chocolate = Chocolate.find(params[:id])
     if @chocolate.update_attributes(params[:chocolate])
       redirect("/chocolates/#{chocolate.id}")
