@@ -1,0 +1,17 @@
+<h2>Edit Chocolate</h2>
+
+<form action='/chocolates/<%= "#{@chocolate.id}" %>' method="post">
+  <label for="chocolate[name]">Name:</label>
+  <input name="chocolate[name]" value='<%= "#{@chocolate.name}" %>'>
+
+  <label for="chocolate[photo_url]">Photo URL:</label>
+  <input name="chocolate[photo_url]" value='<%= "#{@chocolate.photo_url}" %>'>
+
+  <label for="chocolate[manufacturer]">Manufacturer:</label>
+  <input name="chocolate[manufacturer]" value='<%= "#{@chocolate.manufacturer}" %>'>
+
+  <label for="chocolate[ingredients]">Ingredients:</label>
+  <input name="chocolate[ingredients]" value='<%= "#{@chocolate.ingredients}" %>'>
+
+  <input type="submit" value="Submit">
+</form>

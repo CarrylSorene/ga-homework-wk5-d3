@@ -1,0 +1,23 @@
+body {
+  width: 80%;
+  color: #400000;
+  font-family: 'Passion One', cursive;
+}
+
+header {
+  
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 200px;
+  max-height: 150px;
+}
+
+a {
+  text-decoration: none;
+  color: ;
+}
