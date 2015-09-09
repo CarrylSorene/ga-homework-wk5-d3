@@ -1,15 +1,43 @@
 body {
-  width: 80%;
+  width: 99%;
+  margin: 0px auto;
+  padding: 0px 30px;
   color: #400000;
   font-family: 'Passion One', cursive;
 }
 
-header {
-  
+h1 {
+  font-size: 4em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.4em;
+}
+
+nav {
+  text-align: center;
+  }
+
+.row {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+  padding-top: 20px;
 }
 
 ul {
   list-style: none;
+}
+
+li {
+  display: inline-block;
+  padding: 0 10px;
+
 }
 
 img {
@@ -19,5 +47,16 @@ img {
 
 a {
   text-decoration: none;
-  color: ;
+  color: #854442;
+  font-size: 2em;
+}
+
+.title {
+  color: #be9b7b;
+}
+
+button, .button {
+  color: #fff4e6;
+  background-color: #400000;
+  display: inline-block;
 }

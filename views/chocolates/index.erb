@@ -1,45 +1,32 @@
 
-<a class="button" href="/chocolates/new">Add Chocolate</a>
-
 <div class="chocolates">
   <% @chocolates.each do |chocolate| %>
-  <div class="row">
-    <img src="<%= chocolate.photo_url %>" alt="<%= chocolate.name %> photo">
-    <ul>
-      <li>
-        <h2>
-          <a href="/chocolates/<%= chocolate.id %>">
-            <%= chocolate.name %>
-          </a>
-        </h2>
-      </li>
-      <li>
-        <h2>
-          <a href="/chocolates/<%= chocolate.id %>">
-            <%= chocolate.manufacturer %>
-          </a>
-        </h2>
-      </li>
-      <li>
-        <h2>
-          <a href="/chocolates/<%= chocolate.id %>">
-            <%= chocolate.ingredients %>
-          </a>
-        </h2>
-      </li>
-      <li>
-        <a href="/chocolates/<%= chocolate.id %>/edit">
-          Edit
-        </a>
-      </li>
-      <li>
-        <li>
-          <form method="/chocolates/<%= chocolate.id %>/delete" action="post">
-            <button>Delete</button>
-          </form>
-        </li>
-      </li>
-    </ul>
+    <div class="row">
+      
+      <p>
+        <%= chocolate.name %>
+      </p>
+
+      <p><img src="<%= chocolate.photo_url %>" alt="<%= chocolate.name %> photo">
+      </p>
+      
+      <p>
+        <span class="title">Manufacturer:</span> 
+          <%= chocolate.manufacturer %>
+      </p>
+      
+      <p>
+        <span class="title">Ingredients:</span> 
+          <%= chocolate.ingredients %>
+      </p>
+      
+        <form method="/chocolates/<%= chocolate.id %>/edit" action="post">
+          <button>Edit</button>
+      
+        <form method="/chocolates/<%= chocolate.id %>/delete" action="post">
+          <button>Delete</button>
+        </form>
+       
   </div>
   <% end %>
 </div>
