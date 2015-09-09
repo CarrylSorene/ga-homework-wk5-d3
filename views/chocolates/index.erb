@@ -20,10 +20,11 @@
           <%= chocolate.ingredients %>
       </p>
       
-        <form method="/chocolates/<%= chocolate.id %>/edit" action="post">
+        <form action="/chocolates/<%= chocolate.id %>/edit" method="post">
           <button>Edit</button>
-      
-        <form method="/chocolates/<%= chocolate.id %>/delete" action="post">
+        </form>
+        
+        <form action="/chocolates/<%= chocolate.id %>/delete" method="post">
           <button>Delete</button>
         </form>
        

@@ -5,10 +5,6 @@ class Candy < Sinatra::Base
     erb :home
   end
 
-  get '/about' do
-    erb :about
-  end
-
   #RESTful Chocolate Controller Actions
   #index
 
@@ -40,23 +36,23 @@ class Candy < Sinatra::Base
   end
 
   #edit
-  get '/chocolates/:id/edit' do
+  post '/chocolates/:id/edit' do
     @chocolate = Chocolate.find(params[:id])
     erb(:"chocolates/edit")
   end
 
   #update
-  update '/chocolates/:id' do
+  post '/chocolates/:id' do
     @chocolate = Chocolate.find(params[:id])
     if @chocolate.update_attributes(params[:chocolate])
-      redirect("/chocolates/#{chocolate.id}")
+      redirect("/chocolates/#{@chocolate.id}")
     else
       erb(:"chocolates/edit")
     end
   end
 
   #delete
-  delete '/chocolates/:id/delete' do
+  post '/chocolates/:id/delete' do
     @chocolate = Chocolate.find(params[:id])
     if @chocolate.destroy
       redirect('/chocolates')
